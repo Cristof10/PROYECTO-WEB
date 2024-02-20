@@ -9,5 +9,26 @@ public class Categoria {
 		
 	}
 	
+	public String getNombre() {
+		return nombre;
+	}
+
+
+	public Integer getById(Integer id) {
+		return id;
+	}
+
+	public void getCatTransferencia() {
+		
+	}
 	
+	public void save() {
+		
+	}
+	
+	public List<Categoria> getCatIngreso(){
+		return null;
+		
+	}
+		
 }
