@@ -1,16 +1,17 @@
 package modelo;
 
+import java.io.Serializable;
 import java.util.*;
 
-/**
- * @author Carlos Iñiguez
- */
-public class Ingreso {
+public class Ingreso implements Serializable{
 
-    /**
-     * Default constructor
-     */
-    public Ingreso() {
+	private static final long serialVersionUID = 1L;
+	private Double valor;
+	private String concepto;
+	private Cuenta cuenta;
+
+	public Ingreso() {
+    	
     }
 
 }
