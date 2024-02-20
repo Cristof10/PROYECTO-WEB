@@ -1,0 +1,203 @@
+:root {
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #1F6F78;
+    --secundario: #607274;
+    --terciario: #3BAEA0;
+    --claro: #93E4C1;
+    --fondo: #F0F8FF;
+}
+
+/* Globales */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+.sombra {
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(191, 185, 191, 0.51);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(191, 185, 191, 0.51);
+    box-shadow: 0px 5px 15px 0px rgba(191, 185, 191, 0.51);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+
+body {
+    font-size: 16px;
+    /* 1rem = 10px*/
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--fondo);
+    margin: 0;
+    padding: 0;
+
+}
+
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+}
+
+.titulo span {
+    font-size: 2rem;
+    color: #6495ed;
+}
+.fondo {
+    background-color: var(--fondo);
+    filter: blur(5px);
+    
+}
+
+.contenedor-primario {
+    background-color: var(--terciario);
+
+}
+
+.contenedor-secundario {
+    background-color: var(--secundario);
+}
+
+.contenedor-terciario {
+    background-color: var(--claro);
+}
+
+.boton {
+    align-items: center;
+    appearance: none;
+    background-image: radial-gradient(100% 100% at 100% 0, #56c0d6 0, #5698f9 100%);
+    border: 0;
+    border-radius: .5rem;
+    box-shadow: rgba(45, 35, 66, .4) 0 1px 3px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    height: 4rem;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding: 2rem 3rem;
+    margin: 0.5rem;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s, transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+    font-weight: 600;
+    font-size: 2rem;
+    width: 90%;
+}
+
+.boton:hover {
+    cursor: pointer;
+    box-shadow: rgba(45, 33, 70, 0.4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #1F6F78 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+
+.boton:focus {
+    box-shadow: #1F6F78 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #1F6F78 0 -3px 0 inset;
+}
+
+.boton:active {
+    box-shadow: #1F6F78 0 3px 7px inset;
+    transform: translateY(2px);
+}
+
+@media (min-width: 768px) {
+    .boton {
+        width: auto;
+    }
+}
+
+/* Seccion de Dashboard */
+
+.boton-dash {
+    align-items: center;
+    appearance: none;
+    background-image: radial-gradient(100% 100% at 100% 0, #56c0d6 0, #5698f9 100%);
+    border: 0;
+    border-radius: .5rem;
+    box-shadow: rgba(45, 35, 66, .4) 0 1px 3px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    height: 2rem;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding: 1rem 1rem;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s, transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.boton-dash:hover {
+    cursor: pointer;
+    box-shadow: rgba(45, 33, 70, 0.4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #1F6F78 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+
+.boton-dash:focus {
+    box-shadow: #1F6F78 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #1F6F78 0 -3px 0 inset;
+}
+
+/* GILSON: */
+
+.encabezado {
+    background: rgb(86,152,249);
+    background: linear-gradient(90deg, rgba(86,152,249,0.9697128851540616) 0%, rgba(86,192,214,1) 51%, rgba(86,152,249,1) 99%);
+    max-width: 100%;
+    padding: 15px;
+}
+
+.pie{
+    position:fixed;
+    bottom: 0;
+    margin-top: 100px;
+}
+
+
+.contenedor h1{
+    font-weight: bold;
+}
+
+.borderadius{
+    border-radius: .5rem;
+}
+
+
