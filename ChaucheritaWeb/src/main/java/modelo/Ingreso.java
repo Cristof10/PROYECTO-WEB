@@ -3,13 +3,35 @@ package modelo;
 import java.io.Serializable;
 import java.util.*;
 
-public class Ingreso implements Serializable{
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EntityManager;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
+import javax.persistence.Persistence;
 
+@Entity(name="Ingreso")
+public class Ingreso implements Serializable{
+	
 	private static final long serialVersionUID = 1L;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;
+	@Column(name = "valor")
 	private Double valor;
+	@Column(name = "concepto")
 	private String concepto;
+	@OneToOne
+	@JoinColumn(name="cuentaOrigen")
 	private Cuenta cuentaOrigen;
+	@OneToOne
+	@JoinColumn(name="categoria")
 	private Categoria categoria;
+	@Column(name = "fecha")
 	private Date fecha;
 
 	public Ingreso() {
@@ -60,6 +82,20 @@ public class Ingreso implements Serializable{
 	public String toString() {
 		return "Ingreso [valor=" + this.valor + ", concepto=" + this.concepto + ", cuentaOrigen=" + this.cuentaOrigen + ", categoria="
 				+ this.categoria + ", fecha=" + this.fecha + "]";
+	}
+	
+	public void create() {
+		
+	}
+	private static void insertar() {
+		EntityManager em = Persistence.createEntityManagerFactory("Mi_Primera_Chamba").createEntityManager();
+
+		/*Banco pichincha = new Banco("Pichincha");
+		
+		
+		em.getTransaction().begin();
+		em.persist(pichincha);
+		em.getTransaction().commit();*/
 	}
 
 	
